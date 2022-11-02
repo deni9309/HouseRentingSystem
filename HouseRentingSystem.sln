@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem", "HouseRentingSystem\HouseRentingSystem.csproj", "{1DC5A9E7-67C5-4106-B5CA-19231E062711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem", "HouseRentingSystem\HouseRentingSystem.csproj", "{1DC5A9E7-67C5-4106-B5CA-19231E062711}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Core", "HouseRentingSystem.Core\HouseRentingSystem.Core.csproj", "{72353B91-2E55-415C-800C-AECA882D6860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Core", "HouseRentingSystem.Core\HouseRentingSystem.Core.csproj", "{7FC60A42-71BF-4F42-A198-8E79D65EA975}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Infrastructure", "HouseRentingSystem.Infrastructure\HouseRentingSystem.Infrastructure.csproj", "{073589B2-A9CF-4C45-B1A3-1B32BD857A50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{1DC5A9E7-67C5-4106-B5CA-19231E062711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC5A9E7-67C5-4106-B5CA-19231E062711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC5A9E7-67C5-4106-B5CA-19231E062711}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72353B91-2E55-415C-800C-AECA882D6860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72353B91-2E55-415C-800C-AECA882D6860}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72353B91-2E55-415C-800C-AECA882D6860}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72353B91-2E55-415C-800C-AECA882D6860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC60A42-71BF-4F42-A198-8E79D65EA975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC60A42-71BF-4F42-A198-8E79D65EA975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC60A42-71BF-4F42-A198-8E79D65EA975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC60A42-71BF-4F42-A198-8E79D65EA975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073589B2-A9CF-4C45-B1A3-1B32BD857A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073589B2-A9CF-4C45-B1A3-1B32BD857A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073589B2-A9CF-4C45-B1A3-1B32BD857A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073589B2-A9CF-4C45-B1A3-1B32BD857A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
