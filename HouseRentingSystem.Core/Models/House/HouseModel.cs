@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HouseRentingSystem.Core.Models.House
 {
-    public class AllHousesQueryModel
+    public class HouseModel
     {
     }
 }

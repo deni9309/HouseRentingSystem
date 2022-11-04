@@ -1,8 +1,58 @@
-﻿@{
+﻿@model IEnumerable<HouseHomeModel>
+
+@{
     ViewData["Title"] = "Home Page";
+    bool first = true;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@if (Model.Count() == 0)
+{
+    <div class="mt-4 p-5 bg-light">
+        <h1 class="display-4 mb-5">Welcome to HOUSE 4 RENT <br> - the best place for renting houses!</h1>
+        <p class="lead">
+            There are no houses in the system currently available so why don't you just add one?
+        </p>
+        <hr class="my-4">
+        <p class="lead">
+            @if (this.User?.Identity != null && this.User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="House" asp-action="Add" class="btn btn-primary btn-lg" role="button">Add House</a>
+            }
+        </p>
+    </div>
+}
+
+<div class="mb-5"></div>
+<div class="container align-content-center w-75">
+    <div id="carouselExampleControls" class="container-md carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        @foreach (var house in Model)
+        {
+                <div class="carousel-item @(first ? "active" : string.Empty)">
+                    <img class="d-block w-100 h-75 container-md" src="@house.ImageUrl" alt="@house.Title">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>
+                        <a class="btn btn-primary" asp-controller="House" asp-action="Details"
+                       asp-route-id="@house.Id"> @house.Title</a>
+                    </h5>
+                </div>
+            </div>
+            <input type="hidden" value="@(first = false)">
+        }
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+</div>
+@*<div class="text-center bg-light card">
+    <h1 class="display-4">Wellcome to <b class="text-capitalize text-black-50">House 4 Rent</b>!</h1>
+    <h3 class="card-subtitle bg-primary p-2 bg-opacity-10 mb-3">We give you a house, you make it a home!</h3>
+    <hr />
+    <p class="p-2">The biggest house renting system</p>
+</div>*@
