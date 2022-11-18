@@ -19,5 +19,27 @@ namespace HouseRentingSystem.Core.Contracts
             int housesPerPage = 1);
 
         Task<IEnumerable<string>> AllCategoryNames();
+
+        Task<IEnumerable<HouseServiceModel>> AllHousesByAgentId(int id);
+        Task<IEnumerable<HouseServiceModel>> AllHousesByUserId(string userId);
+
+        Task<HouseDetailsModel>HouseDetailsById(int id);
+
+        Task<bool> Exists(int id);
+        Task Edit(int houseId, HouseModel model);
+
+		Task<bool> HasAgentWithId(int houseId, string currentUser);
+
+        Task<int> GetHouseCategoryId(int id);
+
+        Task Delete(int houseId);
+
+        Task<bool> IsRented(int houseId);
+
+        Task<bool> IsRentedByUserWithId(int houseId, string currentUserId);
+
+        Task Rent(int houseId, string currentUserId);
+
+        Task Leave(int houseId);
     }
 }

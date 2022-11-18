@@ -47,5 +47,7 @@ namespace HouseRentingSystem.Infrastructure.Data
         public string? RenterId { get; set; }
 
         public IdentityUser? Renter { get; set; }
+
+        public bool IsActive { get; set; } = true;
     }
 }
