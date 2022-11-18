@@ -1,4 +1,5 @@
 using HouseRentingSystem.Infrastructure.Data;
+using HouseRentingSystem.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,7 +19,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.Password.RequiredLength = builder.Configuration.GetValue<int>("Identity:RequiredLength");
 })
     .AddEntityFrameworkStores<ApplicationDbContext>();
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews()
+    .AddMvcOptions(options =>
+    {
+        options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+    });
 builder.Services.AddApplicationServices();
 
 var app = builder.Build();

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ModelBinders\**" />
+    <EmbeddedResource Remove="ModelBinders\**" />
+    <None Remove="ModelBinders\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HouseRentingSystem.Infrastructure\HouseRentingSystem.Infrastructure.csproj" />
   </ItemGroup>
 
