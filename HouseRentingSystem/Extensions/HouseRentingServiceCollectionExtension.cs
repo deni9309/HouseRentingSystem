@@ -10,7 +10,8 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IRepository, Repository>();
-            services.AddScoped<IHouseService, HouseService>();
+			services.AddScoped<IStatisticService, StatisticService>();
+			services.AddScoped<IHouseService, HouseService>();
             services.AddScoped<IAgentService, AgentService>();
             services.AddScoped<IGuard, Guard>();
 
